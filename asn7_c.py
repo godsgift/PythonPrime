@@ -3,7 +3,7 @@ from timeit import default_timer
 
 start = 0
 
-
+# check if it is the prime number, and returns co-prime value if it have
 def prime(n):
 	prime_list = []
 	x = n
@@ -20,7 +20,7 @@ def prime(n):
 	
 	return prime_list
 
-
+# find d value which is private key
 def find_d(e, t):
 	# t = 60 , e = 13
 	ee = float(e)
@@ -59,5 +59,6 @@ def main():
 
 
 if __name__ == '__main__':
+	# start timer
 	start = default_timer()
 	main()

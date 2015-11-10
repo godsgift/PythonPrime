@@ -1,4 +1,6 @@
 
+
+# find d value which is private key
 def find_d(e, t):
 	# t = 60 , e = 13
 	ee = float(e)
@@ -12,6 +14,7 @@ def find_d(e, t):
 			return rst
 		i += 1
 
+# check if n is prime number or not
 def is_prime(n):
     '''check if integer n is a prime'''
     # make sure n is a positive integer
@@ -32,6 +35,7 @@ def is_prime(n):
             return False
     return True
 
+# get totient value
 def gen_totient():
 	print "Function to get the totient"
 	# get prime number with validation
@@ -55,6 +59,7 @@ def gen_totient():
 	totient = (val1-1)*(val2-1)
 	return totient
 
+# get e value
 def get_e(totient):
 	print "Function to get e value"
 	e = input("Give me a value (less than %d): " % totient)
@@ -77,6 +82,7 @@ def get_e(totient):
 # If you want to generate input first and calculate the output, press 'g'
 ####################################################################################
 def main():
+	print "# To calculate the output (if you know e and totient already), press 'c'\n# If you want to generate input first and calculate the output, press 'g'"
 	mode = raw_input("Calculate output, press (c) OR Generate input, press (g):")
 	if mode == "c" or mode == "C":
 		e = raw_input("Give me (e): ")
